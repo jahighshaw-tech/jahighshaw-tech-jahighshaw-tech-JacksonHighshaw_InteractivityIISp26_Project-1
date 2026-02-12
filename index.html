@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <title> How Music Has Impacted/Influenced Me </title>
 </head>
-<body>
-    <main>
+
     
         <article>
             <h1>How Music Has Impacted/Influenced Me</h1>
@@ -16,6 +14,8 @@
         </article>
          
     </main>
+
+    
 
     <div class="container">
 <p> this is for me to list 10 albums that have had the biggest living impacts on me; meaning they impact me to this day..</p>
@@ -30,7 +30,7 @@
   <li>#7: Labyrinth (From the Original Soundtrack of the Jim Henson Film) By David Bowie </li>
   <li>#8: Blonde by Frank Ocean</li>
   <li>#9: COPINGMECHANISM by Willow</li>
-  <li>#10: Ultraviolence by Lana Del Rey</li>
+  <li>#10: Honeymoon by Lana Del Rey</li>
 
   </ul>
 
@@ -44,22 +44,54 @@
               my head haha. follow me to the next page and I can break it down for ya!!</p>
         </article>
 
+       
+    <main>
+ <img class="album-img" id="albumSlideshow" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q" alt="Album Cover">
+<body>
+  <div class="footer">
   <a href="page2.html" class="next-button">--> click me! <--</a>
+  </div>
 <Style>
 body {
   background-color: #efdefb;
   text-align: center;
+  margin: 40px auto;
+  padding: 0 30px;
+  max-width: 900px;
 }
+
+h1, h2 {
+  margin: 25px 0 15px 0;
+}
+
+article {
+  margin-bottom: 30px;
+}
+
 .container {
   background-color: #9cf4cb;
   padding: 20px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px auto;
   text-align: center;
   Font-family: 'Oswald', monospace;
 }
 article {
   font-family: 'Oswald', monospace;
+}
+
+.footer {
+  clear: both;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.album-img {
+  width: 200px;
+  float: center;
+  margin: 20px 20px 20px 0;
+  transform: rotate(-3deg);
+  transition: opacity 1s ease-in-out;
 }
 
 ul {
@@ -69,7 +101,7 @@ ul {
   justify-content: center;
   list-style-position: inside;
   padding: 0;
-  margin: 0 auto 30px auto;
+  margin: 20px auto 40px auto;
   font-family: 'Oswald', monospace;
 }
 ul li {
@@ -85,8 +117,8 @@ ul li {
     background: #111;
     color: #fff;
     border-radius: 8px;
-     font-family: 'Oswald', monospace;
-
+    font-family: 'Oswald', monospace;
+    margin-top: 20px;
   }
   a:hover {
   background-color: #7ef4b9;
@@ -94,5 +126,37 @@ ul li {
 }
 </style>
 </style>
+
+<script>
+const albumImages = [
+  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q", // #1 Deftones - Around The Fur
+  "https://townsquare.media/site/812/files/2018/07/mac-miller-swimming-cover.jpg", // #2 Mac Miller - Swimming
+  "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pure_Heroine_logo.png", // #3 Lorde - Pure Heroine
+  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hit_Me_Hard_and_Soft_album_logo.png", // #4 Billie Eilish - Hit Me Hard and Soft
+  "https://thesoundofvinyl.us/cdn/shop/products/szactrlgreen2lp.png?v=1680719828", // #5 SZA - Ctrl
+  "https://images.genius.com/f581177ba854b8e4e7c81904cab706f2.1000x1000x1.png", // #6 Blood Orange - Freetown Sound
+  "https://www.thehunchblog.com/wp-content/uploads/2015/04/labyrinth-1.jpg", // #7 David Bowie - Labyrinth
+  "https://preview.redd.it/hgrkhxnj218y.png?auto=webp&s=26befa4775ae40e7eb434149725a6e27c37b9b1c", // #8 Frank Ocean - Blonde
+  "https://media.pitchfork.com/photos/5d377fefeefc47000891a715/1:1/w_640%2Cc_limit/Willow_Willow.jpg", // #9 Willow - COPINGMECHANISM
+  "https://upload.wikimedia.org/wikipedia/fr/5/51/LogoHoneymoon.png" // #10 Lana Del Rey - Honeymoon
+];
+
+let currentIndex = 0;
+const imgElement = document.getElementById('albumSlideshow');
+
+function changeImage() {
+  imgElement.style.opacity = '0';
+  
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % albumImages.length;
+    imgElement.src = albumImages[currentIndex];
+    imgElement.style.opacity = '1';
+  }, 500);
+}
+
+// Change image every 3 seconds
+setInterval(changeImage, 3000);
+</script>
+
 </body>
 </html>
