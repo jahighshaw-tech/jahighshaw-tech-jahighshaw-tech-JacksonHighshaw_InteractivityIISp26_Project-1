@@ -3,8 +3,8 @@
 <head>
     <title> How Music Has Impacted/Influenced Me </title>
 </head>
-
-    
+<body>
+    <main>
         <article>
             <h1>How Music Has Impacted/Influenced Me</h1>
             <p>Music has played a significant role in shaping my personality, emotions, and creativity.
@@ -12,10 +12,6 @@
             <p>From learning an instrument myself to exploring different genres,
              music continues to influence my daily life and personal growth.</p>
         </article>
-         
-    </main>
-
-    
 
     <div class="container">
 <p> this is for me to list 10 albums that have had the biggest living impacts on me; meaning they impact me to this day..</p>
@@ -44,20 +40,20 @@
               my head haha. follow me to the next page and I can break it down for ya!!</p>
         </article>
 
-       
-    <main>
- <img class="album-img" id="albumSlideshow" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q" alt="Album Cover">
-<body>
-  <div class="footer">
-  <a href="page2.html" class="next-button">--> click me! <--</a>
-  </div>
+        <img class="album-img" id="albumSlideshow" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q" alt="Album Cover">
+
+    <div class="footer">
+      <a href="page2.html" class="next-button">--> click me! <--</a>
+    </div>
+    </main>
+
 <Style>
 body {
-  background-color: #efdefb;
   text-align: center;
   margin: 40px auto;
   padding: 0 30px;
   max-width: 900px;
+  transition: background-color 0.8s ease;
 }
 
 h1, h2 {
@@ -141,7 +137,32 @@ const albumImages = [
   "https://upload.wikimedia.org/wikipedia/fr/5/51/LogoHoneymoon.png" // #10 Lana Del Rey - Honeymoon
 ];
 
+const albumTitles = [
+  "Deftones - Around The Fur",
+  "Mac Miller - Swimming",
+  "Lorde - Pure Heroine",
+  "Billie Eilish - Hit Me Hard and Soft",
+  "SZA - Ctrl",
+  "Blood Orange - Freetown Sound",
+  "David Bowie - Labyrinth",
+  "Frank Ocean - Blonde",
+  "Willow - COPINGMECHANISM",
+  "Lana Del Rey - Honeymoon"
+];
+
+const backgroundColors = [
+  "#efdefb",
+  "#9cf4cb",
+  "#ffd4e5",
+  "#d4e5ff",
+  "#ffe5d4",
+  "#f4d4ff",
+  "#d4fff4",
+  "#fff4d4"
+];
+
 let currentIndex = 0;
+let colorIndex = 0;
 const imgElement = document.getElementById('albumSlideshow');
 
 function changeImage() {
@@ -150,12 +171,22 @@ function changeImage() {
   setTimeout(() => {
     currentIndex = (currentIndex + 1) % albumImages.length;
     imgElement.src = albumImages[currentIndex];
+    imgElement.alt = albumTitles[currentIndex];
     imgElement.style.opacity = '1';
   }, 500);
 }
 
+function changeBackgroundColor() {
+  colorIndex = (colorIndex + 1) % backgroundColors.length;
+  document.body.style.backgroundColor = backgroundColors[colorIndex];
+}
+
 // Change image every 3 seconds
 setInterval(changeImage, 3000);
+
+// Change background color every 4 seconds
+changeBackgroundColor();
+setInterval(changeBackgroundColor, 4000);
 </script>
 
 </body>
