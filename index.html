@@ -41,6 +41,16 @@
         </article>
 
         <img class="album-img" id="albumSlideshow" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q" alt="Album Cover">
+        <div id="imageModal" class="image-modal" aria-hidden="true">
+          <div class="image-modal-content">
+            <img id="modalImage" src="" alt="">
+            <p id="modalAltText"></p>
+            <div class="modal-controls">
+              <button id="prevAlbumBtn" type="button">Previous</button>
+              <button id="nextAlbumBtn" type="button">Next</button>
+            </div>
+          </div>
+        </div>
 
     <div class="footer">
       <a href="page2.html" class="next-button">--> click me! <--</a>
@@ -87,7 +97,64 @@ article {
   float: center;
   margin: 20px 20px 20px 0;
   transform: rotate(-3deg);
+  cursor: pointer;
   transition: opacity 1s ease-in-out;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.82);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.image-modal.open {
+  display: flex;
+}
+
+.image-modal-content {
+  max-width: min(90vw, 900px);
+}
+
+#modalImage {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #000;
+}
+
+#modalAltText {
+  margin-top: 12px;
+  color: #fff;
+  font-family: 'Oswald', monospace;
+  font-size: 20px;
+}
+
+.modal-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.modal-controls button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-family: 'Oswald', monospace;
+  cursor: pointer;
+}
+
+.modal-controls button:hover {
+  background: #7ef4b9;
+  color: #111;
 }
 
 ul {
@@ -125,29 +192,30 @@ ul li {
 
 <script>
 const albumImages = [
-  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q", // #1 Deftones - Around The Fur
-  "https://townsquare.media/site/812/files/2018/07/mac-miller-swimming-cover.jpg", // #2 Mac Miller - Swimming
-  "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pure_Heroine_logo.png", // #3 Lorde - Pure Heroine
-  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hit_Me_Hard_and_Soft_album_logo.png", // #4 Billie Eilish - Hit Me Hard and Soft
-  "https://thesoundofvinyl.us/cdn/shop/products/szactrlgreen2lp.png?v=1680719828", // #5 SZA - Ctrl
-  "https://images.genius.com/f581177ba854b8e4e7c81904cab706f2.1000x1000x1.png", // #6 Blood Orange - Freetown Sound
-  "https://www.thehunchblog.com/wp-content/uploads/2015/04/labyrinth-1.jpg", // #7 David Bowie - Labyrinth
-  "https://i0.wp.com/theblackmedia.org/wp-content/uploads/2016/08/frank-ocean-blond-blonde-theblackmedia-2016.png?fit=580%2C300&ssl=1c", // #8 Frank Ocean - Blonde
-  "https://store.rocnation.com/cdn/shop/files/Willow-CopingMechanismVinylLP_NeonGreen_1200_grande.png?v=1732593304", // #9 Willow - COPINGMECHANISM
-  "https://upload.wikimedia.org/wikipedia/fr/5/51/LogoHoneymoon.png" // #10 Lana Del Rey - Honeymoon
+  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q",
+   // #1 Deftones - Around The Fur| Released in 1997
+  "https://townsquare.media/site/812/files/2018/07/mac-miller-swimming-cover.jpg", // #2 Mac Miller - Swimming - Released in 2018
+  "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pure_Heroine_logo.png", // #3 Lorde - Pure Heroine | Released in 2013
+  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hit_Me_Hard_and_Soft_album_logo.png", // #4 Billie Eilish - Hit Me Hard and Soft | Released in 2024
+  "https://thesoundofvinyl.us/cdn/shop/products/szactrlgreen2lp.png?v=1680719828", // #5 SZA - Ctrl | Released in 2017
+  "https://images.genius.com/f581177ba854b8e4e7c81904cab706f2.1000x1000x1.png", // #6 Blood Orange - Freetown Sound | Released in 2016
+  "https://www.thehunchblog.com/wp-content/uploads/2015/04/labyrinth-1.jpg", // #7 David Bowie - Labyrinth | Released in 1986
+  "https://i0.wp.com/theblackmedia.org/wp-content/uploads/2016/08/frank-ocean-blond-blonde-theblackmedia-2016.png?fit=580%2C300&ssl=1c", // #8 Frank Ocean - Blonde | Released in 2016
+  "https://store.rocnation.com/cdn/shop/files/Willow-CopingMechanismVinylLP_NeonGreen_1200_grande.png?v=1732593304", // #9 Willow - COPINGMECHANISM | Released in 2022
+  "https://upload.wikimedia.org/wikipedia/fr/5/51/LogoHoneymoon.png" // #10 Lana Del Rey - Honeymoon | Released in 2015
 ];
 
 const albumTitles = [
-  "Deftones - Around The Fur",
-  "Mac Miller - Swimming",
-  "Lorde - Pure Heroine",
-  "Billie Eilish - Hit Me Hard and Soft",
-  "SZA - Ctrl",
-  "Blood Orange - Freetown Sound",
-  "David Bowie - Labyrinth",
-  "Frank Ocean - Blonde",
-  "Willow - COPINGMECHANISM",
-  "Lana Del Rey - Honeymoon"
+  "Deftones - Around The Fur (Released in 1997)",
+  "Mac Miller - Swimming (Released in 2018)",
+  "Lorde - Pure Heroine (Released in 2013)",
+  "Billie Eilish - Hit Me Hard and Soft (Released in 2024)",
+  "SZA - Ctrl (Released in 2017)",
+  "Blood Orange - Freetown Sound (Released in 2016)",
+  "David Bowie - Labyrinth (Released in 1986)",
+  "Frank Ocean - Blonde (Released in 2016)",
+  "Willow - COPINGMECHANISM (Released in 2022)",
+  "Lana Del Rey - Honeymoon (Released in 2015)"
 ];
 
 const backgroundColors = [
@@ -163,15 +231,33 @@ const backgroundColors = [
 
 let currentIndex = 0;
 let colorIndex = 0;
+let imageIntervalId = null;
 const imgElement = document.getElementById('albumSlideshow');
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const modalAltText = document.getElementById('modalAltText');
+const prevAlbumBtn = document.getElementById('prevAlbumBtn');
+const nextAlbumBtn = document.getElementById('nextAlbumBtn');
+
+imgElement.alt = albumTitles[currentIndex];
+
+function renderCurrentAlbum() {
+  imgElement.src = albumImages[currentIndex];
+  imgElement.alt = albumTitles[currentIndex];
+}
+
+function updateModalFromCurrentAlbum() {
+  modalImage.src = imgElement.src;
+  modalImage.alt = imgElement.alt;
+  modalAltText.textContent = imgElement.alt;
+}
 
 function changeImage() {
   imgElement.style.opacity = '0';
   
   setTimeout(() => {
     currentIndex = (currentIndex + 1) % albumImages.length;
-    imgElement.src = albumImages[currentIndex];
-    imgElement.alt = albumTitles[currentIndex];
+    renderCurrentAlbum();
     imgElement.style.opacity = '1';
   }, 500);
 }
@@ -181,8 +267,60 @@ function changeBackgroundColor() {
   document.body.style.backgroundColor = backgroundColors[colorIndex];
 }
 
+function startImageSlideshow() {
+  if (!imageIntervalId) {
+    imageIntervalId = setInterval(changeImage, 3000);
+  }
+}
+
+function stopImageSlideshow() {
+  if (imageIntervalId) {
+    clearInterval(imageIntervalId);
+    imageIntervalId = null;
+  }
+}
+
+function openImageModal() {
+  stopImageSlideshow();
+  updateModalFromCurrentAlbum();
+  imageModal.classList.add('open');
+  imageModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeImageModal() {
+  imageModal.classList.remove('open');
+  imageModal.setAttribute('aria-hidden', 'true');
+  startImageSlideshow();
+}
+
+imgElement.addEventListener('click', openImageModal);
+
+prevAlbumBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + albumImages.length) % albumImages.length;
+  renderCurrentAlbum();
+  updateModalFromCurrentAlbum();
+});
+
+nextAlbumBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % albumImages.length;
+  renderCurrentAlbum();
+  updateModalFromCurrentAlbum();
+});
+
+imageModal.addEventListener('click', (event) => {
+  if (event.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && imageModal.classList.contains('open')) {
+    closeImageModal();
+  }
+});
+
 // Change image every 3 seconds
-setInterval(changeImage, 3000);
+startImageSlideshow();
 
 // Change background color every 4 seconds
 changeBackgroundColor();
