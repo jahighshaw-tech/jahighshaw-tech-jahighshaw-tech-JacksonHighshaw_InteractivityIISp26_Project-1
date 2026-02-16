@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+ <link rel="stylesheet" href="style1.css">
 <head>
     <title> How Music Has Impacted/Influenced Me </title>
 </head>
@@ -17,6 +18,7 @@
 <p> this is for me to list 10 albums that have had the biggest living impacts on me; meaning they impact me to this day..</p>
 </div>
 <ul> 
+   <div class="container">
     <li>#1: Around The Fur by Deftones</li>
   <li>#2: Swimming By Mac Miller </li>
   <li>#3: Pure Heroine by Lorde</li>
@@ -27,6 +29,7 @@
   <li>#8: Blonde by Frank Ocean</li>
   <li>#9: COPINGMECHANISM by Willow</li>
   <li>#10: Honeymoon by Lana Del Rey</li>
+  </div>
 
   </ul>
 
@@ -53,13 +56,12 @@
         </div>
 
     <div class="footer">
+     <div class="arrow">
+        <img src="https://www.onlygfx.com/wp-content/uploads/2022/01/purple-neon-arrow-2.png" alt="Purple neon arrow" class="arrow-image">
+   
       <a href="page2.html" class="next-button">--> click me! <--</a>
     </div>
     </main>
-
-    <div class="arrow">
-      <img src="https://www.onlygfx.com/wp-content/uploads/2022/01/purple-neon-arrow-2.png" alt="Purple neon arrow" class="arrow-image">
-    </div>
 
 <Style>
 body {
@@ -97,11 +99,7 @@ article {
 }
 
 .arrow {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
+  margin-bottom: 8px;
 }
 
 .arrow-image-wrap {
@@ -109,8 +107,12 @@ article {
 }
 
 .arrow-image {
-  width: 140px;
-  height: auto;
+  width: 55px;
+  height: 45px;
+  transform: rotate(-275deg);
+  display: block;
+  margin: 0 auto;
+  
 }
 
 .album-img {
@@ -151,7 +153,7 @@ article {
 
 #modalAltText {
   margin-top: 12px;
-  color: #fff;
+  color: #fba0fa;
   font-family: 'Oswald', monospace;
   font-size: 20px;
 }
@@ -167,15 +169,15 @@ article {
   padding: 10px 16px;
   border: none;
   border-radius: 8px;
-  background: #111;
-  color: #fff;
+  background: #7ef4b9;
+  color: #470849;
   font-family: 'Oswald', monospace;
   cursor: pointer;
 }
 
 .modal-controls button:hover {
-  background: #7ef4b9;
-  color: #111;
+  background: #eeb7f8;
+  color: #e2f1c1;
 }
 
 ul {
@@ -198,8 +200,8 @@ ul li {
   .next-button {
     display: inline-block;
     padding: 10px 18px;
-    background: #111;
-    color: #fff;
+    background: #7ef4b9;
+    color: #ee12ee;
     border-radius: 8px;
     font-family: 'Oswald', monospace;
     margin-top: 20px;
@@ -209,7 +211,7 @@ ul li {
   font-size: 20px;
 }
 </style>
-</style>
+
 
 <script>
 const albumImages = [
@@ -241,7 +243,7 @@ const albumTitles = [
 
 const backgroundColors = [
   "#efdefb",
-  "#9cf4cb",
+  "#ac9cf4",
   "#ffd4e5",
   "#d4e5ff",
   "#ffe5d4",
