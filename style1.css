@@ -6,6 +6,16 @@ body {
   max-width: 900px;
   transition: background-color 0.8s ease;
 }
+
+.albums-section{
+  background-color: #9ccbf4;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  text-align: center;
+  Font-family: 'Oswald', monospace;
+}
 body {
   border: 10px solid #9ccbf4;
   border-radius: 50px;
@@ -139,6 +149,30 @@ article {
   font-family: 'Oswald', monospace;
 }
 
+.albums-section .album-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #efdefb;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.albums-section .album-card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.albums-section .album-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
 .image-modal.open {
   display: flex;
 }
@@ -199,6 +233,59 @@ ul li {
   margin: 4px 0;
   font-size: 24px;
 }
+
+.albums-section {
+  margin: 40px 0;
+  padding: 20px 0;
+}
+
+.albums-section h2 {
+  text-align: center;
+  color: #092552;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.album-discussion {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.album-discussion h3 {
+  color: #092552;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  font-family: 'Oswald', monospace;
+}
+
+.album-discussion p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Oswald', monospace;
+}
+
+.album-discussion img {
+  width: auto !important;
+  height: auto !important;
+  box-shadow: none;
+  border-radius: 0;
+  flex-shrink: auto;
+}
+
+.shirt-image {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.shirt-image:hover {
+  transform: scale(1.5) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(250, 0, 204, 0.3));
+}
+
+
 
 .next-button {
     display: inline-block;
