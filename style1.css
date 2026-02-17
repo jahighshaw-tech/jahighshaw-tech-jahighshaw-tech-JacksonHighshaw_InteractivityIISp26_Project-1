@@ -18,7 +18,6 @@ html {
   padding: 20px;
   background: url("image1.jpg") center / cover no-repeat;
 }
-
 h1, h2 {
   margin: 25px 0 15px 0;
 }
@@ -123,6 +122,8 @@ article {
 
 .album-card:hover {
   transform: scale(1.5);
+  color: rgb(178, 90, 196);
+  background-color: #efdefb;
 }
 
 .album-card img {
@@ -213,3 +214,34 @@ a:hover {
   background-color: #9ccbf4;
   font-size: 20px;
 }
+
+
+
+
+.audio-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+#playbtn {
+  padding: 8px 12px;
+  background: #7ef4b9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#playbtn:hover {
+  background: #3b1c70;
+}
+
+#seekbar {
+  width: 150px;
+  cursor: pointer;
+}
+
