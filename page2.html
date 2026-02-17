@@ -57,46 +57,91 @@
   <div class="album-card">
     <img src="https://www.therecordhub.com/cdn/shop/products/DEFTONESAROUNDTHEF_2048x.png" alt="Deftones - Around The Fur">
     <h3>Around The Fur</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="deft.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
   
   <div class="album-card">
     <img src="https://shop.macmillerswebsite.com/cdn/shop/files/MMI-swimmingpools-LP.png?v=1700603898" alt="Mac Miller - Swimming">
     <h3>Swimming</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="mac.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
   
   <div class="album-card">
     <img src="https://www.republicrecords.com/cdn/shop/files/lourde-ph-lp.png?v=1750363405" alt="Lorde - Pure Heroine">
     <h3>Pure Heroine</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="lorde.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
   <div class= "album-card">
     <img src="https://store.billieeilish.com/cdn/shop/files/TargetVinyl.png" alt="Billie Eilish - Hit Me Hard and Soft">
     <h3>Hit Me Hard and Soft</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="billie.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
   <div class="album-card">
     <img src="https://thesoundofvinyl.us/cdn/shop/products/szactrlgreen2lp.png?v=1680719828" alt="SZA - Ctrl">
     <h3>Ctrl</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="sza.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
   <div class="album-card">
     <img src="https://thecbpstore.com/cdn/shop/products/Blood_Orange_Freetown_Sound_Deluxe_Black_2x12_inch_Vinyl_And_10_Inch_Single_724bc87c-0268-4670-8222-a97cabb86ab8_2000x.png?v=1667310836" alt="Blood Orange - Freetown Sound">
     <h3>Freetown Sound</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="blood.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
   <div class="album-card">
     <img src="image2.png" alt="David Bowie - Labyrinth">
     <h3>Labyrinth</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="david.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
 <div class="album-card">
     <img src="img3.png" alt="Frank Ocean - Blonde">
     <h3>Blonde</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="frank.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
   <div class="album-card">
     <img src="https://store.rocnation.com/cdn/shop/files/Willow-CopingMechanismVinylLP_NeonGreen_1200_grande.png?v=1732593304" alt="Willow - COPINGMECHANISM">
     <h3>COPINGMECHANISM</h3>
+    <!--Audio barrr -->
+    <div class="audio-bar">
+    <audio id="player" src="willow.mp3"></audio>
+    <button id="playbtn">▶</button>
+    <input type="range" id="seekbar" value="0">
   </div>
 
  <div class="album-card">
@@ -124,27 +169,32 @@
 </body>
 
 <script>
-const player = document.getElementById('player');
-const playBtn = document.getElementById('playbtn');
-const seekbar = document.getElementById('seekbar');
+document.querySelectorAll('.audio-bar').forEach((bar) => {
+  const player = bar.querySelector('audio');
+  const playBtn = bar.querySelector('button');
+  const seekbar = bar.querySelector('input');
 
-playBtn.addEventListener('click', () => {
-  if (player.paused) {
-    player.play();
-    playBtn.textContent = '⏸';
-  } else {
-    player.pause();
-    playBtn.textContent = '▶';
-  }
-});
+  playBtn.addEventListener('click', () => {
+    if (player.paused) {
+      player.play();
+      playBtn.textContent = '⏸';
+    } else {
+      player.pause();
+      playBtn.textContent = '▶';
+    }
+  });
 
-player.addEventListener('timeupdate', () => {
-  seekbar.value = (player.currentTime / player.duration) * 100;
-});
+  player.addEventListener('timeupdate', () => {
+    if (player.duration) {
+      seekbar.value = (player.currentTime / player.duration) * 100;
+    }
+  });
 
-seekbar.addEventListener('input', () => {
-  player.currentTime = (seekbar.value / 100) * player.duration;
+  seekbar.addEventListener('input', () => {
+    if (player.duration) {
+      player.currentTime = (seekbar.value / 100) * player.duration;
+    }
+  });
 });
 </script>
-
 </html>
