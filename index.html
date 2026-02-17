@@ -56,176 +56,27 @@
         </div>
 
     <div class="footer">
-     <div class="arrow">
-        <img src="https://www.onlygfx.com/wp-content/uploads/2022/01/purple-neon-arrow-2.png" alt="Purple neon arrow" class="arrow-image">
-   
+     <div class="arrow"><div class="float-up-down">
+<img src="https://www.onlygfx.com/wp-content/uploads/2022/01/purple-neon-arrow-2.png" alt="Purple neon arrow" class="arrow-image">
+</div>  
       <a href="page2.html" class="next-button">--> click me! <--</a>
     </div>
     </main>
 
-<Style>
-body {
-  text-align: center;
-  margin: 40px auto;
-  padding: 0 30px;
-  max-width: 900px;
-  transition: background-color 0.8s ease;
-}
-
-h1, h2 {
-  margin: 25px 0 15px 0;
-}
-
-article {
-  margin-bottom: 30px;
-}
-
-.container {
-  background-color: #9cf4cb;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  text-align: center;
-  Font-family: 'Oswald', monospace;
-}
-article {
-  font-family: 'Oswald', monospace;
-}
-
-.footer {
-  clear: both;
-  margin-top: 40px;
-  padding: 20px 0;
-}
-
-.arrow {
-  margin-bottom: 8px;
-}
-
-.arrow-image-wrap {
-  margin: 10px auto 20px auto;
-}
-
-.arrow-image {
-  width: 55px;
-  height: 45px;
-  transform: rotate(-275deg);
-  display: block;
-  margin: 0 auto;
-  
-}
-
-.album-img {
-  width: 200px;
-  float: center;
-  margin: 20px 20px 20px 0;
-  transform: rotate(-3deg);
-  cursor: pointer;
-  transition: opacity 1s ease-in-out;
-}
-
-.image-modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.82);
-  padding: 20px;
-  z-index: 1000;
-}
-
-.image-modal.open {
-  display: flex;
-}
-
-.image-modal-content {
-  max-width: min(90vw, 900px);
-}
-
-#modalImage {
-  width: 100%;
-  max-height: 70vh;
-  object-fit: contain;
-  border-radius: 8px;
-  background: #000;
-}
-
-#modalAltText {
-  margin-top: 12px;
-  color: #fba0fa;
-  font-family: 'Oswald', monospace;
-  font-size: 20px;
-}
-
-.modal-controls {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 14px;
-}
-
-.modal-controls button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #7ef4b9;
-  color: #470849;
-  font-family: 'Oswald', monospace;
-  cursor: pointer;
-}
-
-.modal-controls button:hover {
-  background: #eeb7f8;
-  color: #e2f1c1;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  list-style-position: inside;
-  padding: 0;
-  margin: 20px auto 40px auto;
-  font-family: 'Oswald', monospace;
-}
-ul li {
-  text-align: center;
-  margin: 4px 0;
-  font-size: 24px;
-}
-
-<style>
-  .next-button {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #7ef4b9;
-    color: #ee12ee;
-    border-radius: 8px;
-    font-family: 'Oswald', monospace;
-    margin-top: 20px;
-  }
-  a:hover {
-  background-color: #7ef4b9;
-  font-size: 20px;
-}
-</style>
-
 
 <script>
 const albumImages = [
-  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/735f3aaa-e154-4839-acce-7d3656f38f86/dfs87gu-b1d33620-5cd7-44f0-86da-8703d87cae9a.png/v1/fill/w_640,h_400/deftones___around_the_fur_logo_by_mudshuvel_dfs87gu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvNzM1ZjNhYWEtZTE1NC00ODM5LWFjY2UtN2QzNjU2ZjM4Zjg2XC9kZnM4N2d1LWIxZDMzNjIwLTVjZDctNDRmMC04NmRhLTg3MDNkODdjYWU5YS5wbmciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._CvRoDfPdjuk-gaGUJB91OpdSg6-XWK_TAUVx3sEO0Q",
+  "https://www.indiemerchstore.com/cdn/shop/products/d62e797e1f28e6c14631b41cb479122a_800x.jpg?v=1680293264",
    // #1 Deftones - Around The Fur| Released in 1997
   "https://townsquare.media/site/812/files/2018/07/mac-miller-swimming-cover.jpg", // #2 Mac Miller - Swimming - Released in 2018
-  "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pure_Heroine_logo.png", // #3 Lorde - Pure Heroine | Released in 2013
-  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hit_Me_Hard_and_Soft_album_logo.png", // #4 Billie Eilish - Hit Me Hard and Soft | Released in 2024
-  "https://thesoundofvinyl.us/cdn/shop/products/szactrlgreen2lp.png?v=1680719828", // #5 SZA - Ctrl | Released in 2017
+  "https://www.turntableguy.co.za/wp-content/uploads/2023/08/R-25937440-1675101658-5965.jpg", // #3 Lorde - Pure Heroine | Released in 2013
+  "https://media.pitchfork.com/photos/6614092742a7de97785c7a48/master/pass/Billie-Eilish-Hit-Me-Hard-and-Soft.jpg", // #4 Billie Eilish - Hit Me Hard and Soft | Released in 2024
+  "https://m.media-amazon.com/images/I/91AbZ7RgrEL._UF1000,1000_QL80_.jpg", // #5 SZA - Ctrl | Released in 2017
   "https://images.genius.com/f581177ba854b8e4e7c81904cab706f2.1000x1000x1.png", // #6 Blood Orange - Freetown Sound | Released in 2016
   "https://www.thehunchblog.com/wp-content/uploads/2015/04/labyrinth-1.jpg", // #7 David Bowie - Labyrinth | Released in 1986
   "https://i0.wp.com/theblackmedia.org/wp-content/uploads/2016/08/frank-ocean-blond-blonde-theblackmedia-2016.png?fit=580%2C300&ssl=1c", // #8 Frank Ocean - Blonde | Released in 2016
-  "https://store.rocnation.com/cdn/shop/files/Willow-CopingMechanismVinylLP_NeonGreen_1200_grande.png?v=1732593304", // #9 Willow - COPINGMECHANISM | Released in 2022
-  "https://upload.wikimedia.org/wikipedia/fr/5/51/LogoHoneymoon.png" // #10 Lana Del Rey - Honeymoon | Released in 2015
+  "https://imagescdn.juno.co.uk/full/CS934106-01B-BIG.jpg", // #9 Willow - COPINGMECHANISM | Released in 2022
+  "https://m.media-amazon.com/images/I/71ZvezJ2OoL._UF1000,1000_QL80_.jpg" // #10 Lana Del Rey - Honeymoon | Released in 2015
 ];
 
 const albumTitles = [
