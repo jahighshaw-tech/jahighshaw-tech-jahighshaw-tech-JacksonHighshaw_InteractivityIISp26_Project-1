@@ -85,7 +85,7 @@ You can also deploy this site to:
 4. Hit Me Hard and Soft - Billie Eilish (2024)
 5. Ctrl - SZA (2017)
 6. Freetown Sound - Blood Orange (2016)
-7. Labyrinth - David Bowie (1986)
+7. Labyrinth (Original Soundtrack) - David Bowie (1986)
 8. Blonde - Frank Ocean (2016)
 9. COPINGMECHANISM - Willow (2022)
 10. Honeymoon - Lana Del Rey (2015)
