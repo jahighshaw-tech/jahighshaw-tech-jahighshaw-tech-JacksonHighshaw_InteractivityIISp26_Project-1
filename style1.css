@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font.woff2') format('woff2');
+}
+
 body {
   text-align: center;
   margin: 40px auto;
@@ -7,6 +12,7 @@ body {
   max-width: 900px;
   transition: background-color 0.8s ease;
   font-family: 'Poppins', sans-serif;
+  cursor: url('https://images.vexels.com/media/users/3/161026/isolated/preview/dd2eaf2264dfa65db6da49168c10027e-record-vinyl-disc-illustration.png'), auto;
 }
 
 .albums-section{
@@ -30,8 +36,18 @@ html {
   padding: 20px;
   background: url("image1.jpg") center / cover no-repeat;
 }
-h1, h2 {
+h1 {
   margin: 25px 0 15px 0;
+  font-family: 'CustomFont', sans-serif;
+}
+
+h2 {
+  margin: 25px 0 15px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-title {
+  font-family: 'CustomFont', sans-serif;
 }
 
 article {
