@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
   text-align: center;
@@ -5,6 +6,7 @@ body {
   padding: 0 30px;
   max-width: 900px;
   transition: background-color 0.8s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .albums-section{
@@ -14,7 +16,7 @@ body {
   border-radius: 10px;
   margin: 20px auto;
   text-align: center;
-  Font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   border: 10px solid #9ccbf4;
@@ -42,7 +44,7 @@ article {
   border-radius: 10px;
   margin: 20px auto;
   text-align: center;
-  Font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
   transition: background-color 0.8s ease;
 }
 
@@ -52,11 +54,11 @@ article {
   border-radius: 10px;
   margin: 20px auto;
   text-align: center;
-  Font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 article {
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer {
@@ -109,7 +111,7 @@ article {
 }
 
 .arrow-text {
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #9ccbf4;
   margin-top: 8px;
@@ -185,7 +187,7 @@ article {
   color: #333;
   font-size: 14px;
   margin-top: 8px;
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 .albums-section .album-card {
@@ -231,7 +233,7 @@ article {
 #modalAltText {
   margin-top: 12px;
   color: #ffb6b6;
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
 
@@ -248,7 +250,7 @@ article {
   border-radius: 8px;
   background: #cfe3f5;
   color: #092552;
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
 
@@ -265,7 +267,7 @@ ul {
   list-style-position: inside;
   padding: 0;
   margin: 20px auto 40px auto;
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 ul li {
   text-align: center;
@@ -295,7 +297,7 @@ ul li {
   color: #092552;
   font-size: 20px;
   margin: 0 0 15px 0;
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 .album-discussion p {
@@ -303,7 +305,7 @@ ul li {
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Oswald', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 .album-discussion img {
@@ -332,7 +334,7 @@ ul li {
     background: #9ccbf4;
     color: #fff;
     border-radius: 8px;
-    font-family: 'Oswald', monospace;
+    font-family: 'Poppins', sans-serif;
     margin-top: 20px;
   }
 
@@ -342,7 +344,7 @@ ul li {
     background: #9ccbf4;
     color: #fff;
     border-radius: 8px;
-    font-family: 'Oswald', monospace;
+    font-family: 'Poppins', sans-serif;
       margin-top: 20px;}
       
 
